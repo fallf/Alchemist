@@ -4,22 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+body{display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+margin: 0;
+
+}
+p{
+    display: block;
+        text-align: center;   
+        background-color: #e37039;
+        margin: 7px ;
+        padding: 10px;
+        border: solid 3px;
+        
+}
+
+
+        form {
+            background-color: #e37039;
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+            justify-items: center;
+            animation: fadeIn 0.7s ease-in;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .text, .email, .date, .select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .text:focus,
+        .email:focus,
+        .date:focus,
+        .select:focus {
+            border-color: orange;
+            outline: none;
+            box-shadow: 0 0 5px rgba(90, 62, 148, 0.5);
+        }
+
+        .submit-btn {
+            color: orange;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #7a5ba6;
+            transform: translateY(-3px) rotate(2deg);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <main>
         <nav id="navbar" class="navbar">
             <h1 id="namew" class="nameW">Alchemist's Potion</h1>
             <ul>
-                <li> <a href="#">Home</a></li>
-                <li> <a href="./pages/secindex.html">Potion</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="./pages/secindex.html">Potion</a></li>
                 <li><a href="./pages/thirdindex.html">About</a></li>
                 <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
     </main>
+    <h1>Join Our Magical Realm</h1>
+    <h2>About</h2>
+    <p>Welcome to our magical realm, where we brew potions for every occasion! Are you feeling lovelorn? Our love potions come with a satisfaction guarantee—results may vary, but at least you’ll smell great! Need healing? Our healing potions have been known to work wonders, unless you mistakenly grab our “Oops, I Spilled Coffee” brew instead. And for those chasing fortune, our money potion is infused with a sprinkle of cinnamon—perfect for attracting wealth, unless you end up with sticky fingers! So grab your cauldron and join us on this whimsical journey through the art of potion-making. Remember, it’s all fun and games until someone turns into a frog!
+
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolore iusto fugiat numquam voluptatibus aperiam dolor id deserunt beatae, sed, debitis perspiciatis nihil. Voluptatibus ex eius, est officia dicta optio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laborum ad ipsam dolore quidem praesentium voluptas, nobis molestias exercitationem blanditiis tempora, adipisci error laudantium sunt! Natus assumenda voluptatum numquam eum?</p>
+    <form class="form" action="/submit" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" class="text" required>
+
+        <label for="email">Your Magical Email:</label>
+        <input type="email" id="email" name="email" class="email" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" class="date" required>
+
+        <label for="favoriteSpell">Favorite Spell or Potion:</label>
+        <input type="text" id="favoriteSpell" name="favoriteSpell" class="text">
+
+        <label for="magicalCreatures">Choose Your Magical Companion:</label>
+        <select name="magicalCreatures" id="magicalCreatures" class="select">
+            <option value="unicorn">Unicorn</option>
+            <option value="dragon">Dragon</option>
+            <option value="phoenix" selected>Phoenix</option>
+            <option value="fairy">Fairy</option>
+        </select>
+
+        <input type="submit" value="Join the Adventure" class="submit-btn">
+    </form>
+
+    <label for="magicalElements">Choose a Magical Element:</label>
+    <select name="magicalElements" id="magicalElements" class="select">
+        <option value="elixirOfLife">Elixir of Life</option>
+        <option value="dreamPotion">Dream Potion</option>
+        <option value="transformationSpell">Transformation Spell</option>
+        <option value="fateCharming" selected>Fate Charming</option>
+        <option value="wisdomElixir">Wisdom Elixir</option>
+    </select>
     
-    <h1>About</h1>
-    
+    <input type="submit" value="Brew Your Choice" class="submit-btn">
 </body>
 </html>
